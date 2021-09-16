@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Nav from './Components/Nav'
-import Date from './Pages/Date'
+import Mars from './Pages/Mars'
 import Home from './Pages/Home'
 const Routes = () => {
   return (
@@ -9,7 +9,7 @@ const Routes = () => {
       <Nav />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/date' component={Date} />
+        <Route exact path='/mars' component={Mars} />
       </Switch>
     </>
   )

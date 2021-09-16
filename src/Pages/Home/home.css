@@ -1,3 +1,80 @@
 .home img {
   width: 100%;
+  margin: 20px auto;
+  /* border: 2px solid rgb(124, 124, 124); */
+  /* box-shadow: 2px 4px 6px rgba(105, 105, 105, 0.637); */
+  box-shadow: 0px 0px 6px 2px rgba(105, 105, 105, 0.637);
+  padding: 5px;
+}
+
+.home {
+  padding-bottom: 80px;
+}
+
+.apodData h2 {
+  font-size: 2.7rem;
+  text-align: center;
+}
+
+.apodData p {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  word-spacing: 4px;
+}
+
+.apodData h3 {
+  font-size: 1.6rem;
+  margin: 15px auto 14px 3px;
+  position: relative;
+}
+
+.apodData h3::after {
+  width: 85px;
+  height: 3px;
+  background-color: rgb(253, 106, 106);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  content: ' ';
+}
+
+.homeDiv {
+  background-color: rgb(36, 32, 32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.homeDiv input {
+  padding: 7px 17px;
+  width: 80%;
+  border-radius: 8px;
+  font-size: 1.7rem;
+  background-color: rgb(184, 219, 230);
+  border: 2px solid white;
+}
+
+.homeDiv div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeDiv h1 {
+  color: rgba(255, 255, 255, 0.938);
+  text-align: center;
+  font-size: 2.6rem;
+  width: 80%;
+  margin-bottom: 17px;
+}
+
+.loadingDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  font-size: 2.5rem;
+  font-weight: 300;
 }

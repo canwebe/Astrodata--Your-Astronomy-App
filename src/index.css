@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
+  background-color: azure;
 }
 
 a {
@@ -29,4 +30,8 @@ p {
 h1 {
   text-align-last: center;
   font-size: 3.2rem;
+}
+
+img {
+  width: 100%;
 }

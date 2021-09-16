@@ -1,27 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './home.css'
 const api_key = process.env.REACT_APP_API
 
 const Home = () => {
   const [data, setData] = useState(null)
-  const [date, setDate] = useState('')
   const [isLoading, setIsLoading] = useState(true)
 
-  //Functions
-  const fetchData = async () => {
-    const json = await fetch(
-      `https://api.nasa.gov/planetary/apod?api_key=${api_key}`
-    )
-    const response = await json.json()
-    setData(response)
-    setIsLoading(false)
-  }
+  const dateRef = useRef()
 
-  const handleDate = async (e) => {
+  //Functions
+
+  const fetchData = async () => {
     setIsLoading(true)
-    setDate(e.target.value)
     const json = await fetch(
-      `https://api.nasa.gov/planetary/apod?date=${date}&api_key=${api_key}`
+      `https://api.nasa.gov/planetary/apod?date=${dateRef.current.value}&api_key=${api_key}`
     )
     const response = await json.json()
     setData(response)
@@ -38,7 +30,7 @@ const Home = () => {
       <div className='homeDiv'>
         <div>
           <h1>Change date for different Photo Of The Day</h1>
-          <input value={date} onChange={handleDate} type='date' />
+          <input ref={dateRef} onChange={fetchData} type='date' />
         </div>
       </div>
       <div className='wrapper'>
@@ -49,7 +41,7 @@ const Home = () => {
             <div className='apodData'>
               <h3>{data.date}</h3>
               <h2>{data.title}</h2>
-              <a href={data.hdurl} rel='noopener noreferrer'>
+              <a target='_blank' href={data.hdurl} rel='noopener noreferrer'>
                 <img src={data.url} alt={data.title} />
               </a>
 

@@ -30,6 +30,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.884);
 }
 
 a.selected {

@@ -4,7 +4,7 @@ const api_key = process.env.REACT_APP_API
 
 const Home = () => {
   const [data, setData] = useState(null)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false) //trues
 
   const dateRef = useRef()
 
@@ -20,9 +20,36 @@ const Home = () => {
     setIsLoading(false)
   }
 
+  const fetchLocal = () => {
+    fetch(
+      `https://api.nasa.gov/planetary/apod?date=${dateRef.current.value}&api_key=${api_key}`
+    )
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json)
+        localStorage.setItem('photo', JSON.stringify(json))
+      })
+  }
+
   //Side Effects
   useEffect(() => {
-    fetchData()
+    let photos = localStorage.getItem('photo')
+    if (photos) {
+      photos = JSON.parse(photos)
+      if (
+        new Date().toLocaleDateString() !==
+        new Date(photos.date).toLocaleDateString()
+      ) {
+        console.log('Date New Part')
+        fetchLocal()
+      } else {
+        console.log('Date match part')
+        setData(photos)
+      }
+    } else {
+      console.log('New fetch Part')
+      fetchLocal()
+    }
   }, [])
 
   return (
@@ -41,10 +68,18 @@ const Home = () => {
             <div className='apodData'>
               <h3>{data.date}</h3>
               <h2>{data.title}</h2>
-              <a target='_blank' href={data.hdurl} rel='noopener noreferrer'>
-                <img src={data.url} alt={data.title} />
-              </a>
-
+              {data.media_type === 'video' ? (
+                <iframe
+                  title={data.title}
+                  src={data.url}
+                  width='100%'
+                  height='230px'
+                />
+              ) : (
+                <a target='_blank' href={data.hdurl} rel='noopener noreferrer'>
+                  <img src={data.url} alt={data.title} />
+                </a>
+              )}
               <p>{data.explanation}</p>
             </div>
           )

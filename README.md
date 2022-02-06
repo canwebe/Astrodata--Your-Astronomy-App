@@ -6,13 +6,13 @@ View Live Site [https://astrodata.netlify.app](https://astrodata.netlify.app)
 
 ## Required File
 
-### env
+### ENV File
 
 Required an .env file in root directory.
 
 #### Inside .env
 
-REACT_APP_API = Your Nasa Api Key
+#### `REACT_APP_API` = Your Nasa Api Key
 
 ## Available Scripts
 

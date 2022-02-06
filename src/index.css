@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   background-color: azure;
 }
 
@@ -29,6 +29,7 @@ p {
   margin: 0 auto;
   max-width: 2000px;
 }
+
 h1 {
   text-align-last: center;
   font-size: 3.2rem;

@@ -21,3 +21,66 @@
   margin: 20px auto;
   align-items: center;
 }
+
+.solControl button {
+  padding: 2px 4px;
+  font-size: 14px;
+}
+
+.cameraOptions {
+  padding: 3px;
+  background-color: #d7dce0;
+  width: 230px;
+}
+
+.searchDiv {
+  text-align: center;
+  margin: 3px 0px;
+}
+
+.roverWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.marsPhotoCard {
+  /* margin: 0 auto; */
+  margin: 0px 20px 26px;
+  /* margin-bottom: 25px; */
+  /* width: 75%; */
+  background-color: rgb(186 155 146);
+  box-shadow: -1px -2px 8px 0 rgb(0 0 0 / 20%), 0px 1px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.marsPhotoCard img {
+  width: 265px;
+  height: 260px;
+}
+
+.info {
+  padding: 2px 5px 6px;
+}
+
+.nextPage {
+  text-align: center;
+}
+
+.nextPage button {
+  padding: 2px 3px;
+}
+
+@media screen and (min-width: 925px) {
+  .marsPhotoCard img {
+    width: 281px;
+    height: 273px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .marsPhotoCard img {
+    width: 341px;
+    height: 325px;
+  }
+}

@@ -35,6 +35,8 @@ div.searchDiv {
 }
 
 .searchDiv button {
-  padding: 7.5px 15px;
+  padding: 6.5px 10px;
   margin-left: 7px;
+  font-size: 15px;
+  border-radius: 4px;
 }

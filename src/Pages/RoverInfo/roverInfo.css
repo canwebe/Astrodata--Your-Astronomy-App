@@ -1,74 +1,187 @@
 .cameraBtn {
-  padding: 13px 20px;
-  color: aliceblue;
-  font-size: 1.8rem;
-  margin: 14px auto;
-  display: block;
+  padding: 6px 15px;
+  color: rgb(255, 255, 255);
+  font-size: 1.4rem;
   border-radius: 6px;
-  background-color: cadetblue;
-  box-shadow: 1px 2px 6px rgba(71, 71, 71, 0.877);
+  background-color: rgb(75, 137, 139);
+  outline: none;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  z-index: 99;
+  border: none;
+}
+button.cameraBtn:hover {
+  background-color: rgb(54, 108, 110);
 }
 
-.roverDataHeadline {
-  margin: 20px auto 25px;
-  text-align: center;
-  font-size: 2.5rem;
+button.cameraBtn:active {
+  transform: scale(0.96);
+}
+
+.maxSol {
+  color: rgb(191, 191, 191);
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.maxSol span {
+  color: tomato;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h1.roverDataHeadline {
+  margin: 0px auto 10px;
 }
 
 .solControl {
   display: flex;
-  justify-content: space-evenly;
-  margin: 20px auto;
-  align-items: center;
+  justify-content: center;
+  margin: 20px auto 10px;
+  /* align-items: center; */
+}
+.solControl h1 {
+  margin-top: 3px;
 }
 
 .solControl button {
-  padding: 2px 4px;
-  font-size: 14px;
+  font-size: 4.7rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: blueviolet;
+  transition: all 0.3s;
+}
+
+.solControl button:hover:not(:disabled) {
+  color: rgb(42, 26, 185);
+}
+.solControl .rightBtn:active:not(:disabled) {
+  transform: translateX(4px);
+}
+.solControl .leftBtn:active:not(:disabled) {
+  transform: translateX(-4px);
+}
+
+.solControl button:disabled {
+  color: rgb(218, 214, 221);
 }
 
 .cameraOptions {
-  padding: 3px;
+  padding: 6px;
+  border-radius: 6px;
   background-color: #d7dce0;
-  width: 230px;
+  width: 100%;
+}
+.flexItem {
+  width: 250px;
 }
 
 .searchDiv {
+  margin: 11px 0px;
+  display: flex;
+  gap: 11px;
+}
+.searchDiv input {
   text-align: center;
-  margin: 3px 0px;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  background-color: #a4b1bb;
+  border-color: white;
+}
+
+.searchDiv input::placeholder {
+  color: rgb(103, 101, 101);
 }
 
 .roverWrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 40px;
+  min-height: 60vh;
+}
+
+.roverWrapper .loadingMars {
+  margin-top: 80px;
 }
 
 .marsPhotoCard {
   /* margin: 0 auto; */
-  margin: 0px 20px 26px;
+  /* margin: 0px 20px 26px; */
   /* margin-bottom: 25px; */
-  /* width: 75%; */
-  background-color: rgb(186 155 146);
-  box-shadow: -1px -2px 8px 0 rgb(0 0 0 / 20%), 0px 1px 20px 0 rgb(0 0 0 / 19%);
+  padding: 8px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.28);
+  border-bottom: 3px solid blue;
+  min-height: 280px;
 }
 
 .marsPhotoCard img {
-  width: 265px;
-  height: 260px;
+  border-radius: 6px;
 }
 
 .info {
-  padding: 2px 5px 6px;
+  padding: 10px 10px 6px;
 }
 
 .nextPage {
-  text-align: center;
+  /* display: flex;
+  justify-content: center;
+  margin: 40px auto 20px;
+  align-items: center;
+  gap: 30px; */
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr;
+  margin: 40px auto 20px;
+  gap: 30px;
+}
+
+.nextPage p {
+  font-size: 1.8rem;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  grid-column: 2;
+  box-shadow: 0 2px 20px rgb(0, 0, 0, 0.28);
+  margin: 0 auto;
 }
 
 .nextPage button {
-  padding: 2px 3px;
+  padding: 8px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: rgb(83, 83, 220);
+  color: #f1f1f1;
+  font-weight: 600;
+  border: none;
+  font-size: 1.4rem;
+  border-bottom: 2px solid rgb(15, 1, 61);
+  box-shadow: 0 0 18px rgb(0, 0, 0, 0.28);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.nextPage button:nth-child(1) {
+  margin-left: auto;
+}
+.nextPage button:nth-child(3) {
+  margin-right: auto;
+}
+
+.nextPage button:hover {
+  background-color: rgb(62, 62, 182);
+}
+
+.nextPage button:active {
+  border-bottom: 1px solid rgb(15, 1, 61);
+  transform: translateY(2px);
 }
 
 @media screen and (min-width: 925px) {

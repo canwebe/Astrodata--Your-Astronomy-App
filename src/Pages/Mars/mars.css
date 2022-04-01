@@ -10,25 +10,33 @@
 .roverList {
   display: flex;
   flex-wrap: wrap;
+  gap: 22px;
   justify-content: space-evenly;
 }
 
 .roverCard img {
-  height: 120px;
+  height: 110px;
+  border-radius: 7px;
+  filter: grayscale(0.5);
 }
 
 .roverCard {
   width: 46%;
-  padding: 10px;
-  margin: 10px auto;
+  padding: 3px;
+  border-radius: 5px;
   background-color: white;
-  box-shadow: 0px 0px 6px 1px rgba(145, 145, 145, 0.897);
+  box-shadow: 2px 4px 16px -1px rgba(0, 0, 0, 0.282);
   /* border: 2px solid rgb(167, 167, 167); */
 }
 
+.roverDetails {
+  padding: 0 7px 10px;
+}
+
 .roverCard h2 {
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   margin: 4px auto 5px;
+  text-align: center;
 }
 
 .roverCard p {
@@ -38,6 +46,13 @@
 .marsHome h1 {
   margin: 9px auto;
   font-size: 2.5rem;
+}
+
+.loadingMars {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 165px;
+  color: #7f7f7f;
 }
 
 /* responsive design */

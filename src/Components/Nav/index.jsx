@@ -7,7 +7,7 @@ const Nav = () => {
     <>
       <div className='nav'>
         <Link to='/'>
-          <p>AstroPhoto</p>
+          <p>AstroData</p>
         </Link>
       </div>
       <div className='navLink'>

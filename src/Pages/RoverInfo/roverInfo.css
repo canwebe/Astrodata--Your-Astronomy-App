@@ -1,7 +1,7 @@
 .cameraBtn {
   padding: 6px 15px;
   color: rgb(255, 255, 255);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   border-radius: 6px;
   background-color: rgb(75, 137, 139);
   outline: none;
@@ -55,14 +55,13 @@ h1.roverDataHeadline {
   transition: all 0.3s;
 }
 
-.solControl button:hover:not(:disabled) {
-  color: rgb(42, 26, 185);
-}
 .solControl .rightBtn:active:not(:disabled) {
   transform: translateX(4px);
+  color: rgb(42, 26, 185);
 }
 .solControl .leftBtn:active:not(:disabled) {
   transform: translateX(-4px);
+  color: rgb(42, 26, 185);
 }
 
 .solControl button:disabled {
@@ -70,13 +69,16 @@ h1.roverDataHeadline {
 }
 
 .cameraOptions {
-  padding: 6px;
+  padding: 8.5px;
   border-radius: 6px;
   background-color: #d7dce0;
   width: 100%;
 }
+.cameraOptions:focus {
+  outline: none;
+}
 .flexItem {
-  width: 250px;
+  width: 270px;
 }
 
 .searchDiv {
@@ -86,10 +88,15 @@ h1.roverDataHeadline {
 }
 .searchDiv input {
   text-align: center;
-  padding: 5px 10px;
-  font-size: 1.5rem;
+  padding: 8px;
+  font-size: 1.6rem;
   background-color: #a4b1bb;
   border-color: white;
+}
+
+.searchDiv input:focus {
+  border-color: cornflowerblue;
+  outline: none;
 }
 
 .searchDiv input::placeholder {
@@ -164,7 +171,6 @@ h1.roverDataHeadline {
   border: none;
   font-size: 1.4rem;
   border-bottom: 2px solid rgb(15, 1, 61);
-  box-shadow: 0 0 18px rgb(0, 0, 0, 0.28);
   transition: all 0.3s;
   cursor: pointer;
 }

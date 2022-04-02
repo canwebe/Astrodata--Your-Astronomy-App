@@ -5,6 +5,8 @@ import Curiosity from './roverPhoto/curiosity.jpg'
 import Spirit from './roverPhoto/sprit.jpg'
 import Opportunity from './roverPhoto/oportunity.jpg'
 import Perseverance from './roverPhoto/perseverance.webp'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 const imgs = [Curiosity, Spirit, Opportunity, Perseverance]
 const api_key = process.env.REACT_APP_API
 
@@ -49,7 +51,8 @@ const Mars = () => {
                   key={i}
                   className='roverCard'
                 >
-                  <img src={imgs[i]} alt={rover.name} />
+                  <LazyLoadImage src={imgs[i]} alt={rover.name} effect='blur' />
+
                   <div className='roverDetails'>
                     <h2>{rover.name}</h2>
                     <p>

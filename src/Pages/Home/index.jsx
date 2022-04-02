@@ -1,5 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import './home.css'
+
 const api_key = process.env.REACT_APP_API
 
 const Home = () => {
@@ -76,8 +79,17 @@ const Home = () => {
                   height='230px'
                 />
               ) : (
-                <a target='_blank' href={data.hdurl} rel='noopener noreferrer'>
-                  <img src={data.url} alt={data.title} />
+                <a
+                  className='imgSpan'
+                  target='_blank'
+                  href={data.hdurl}
+                  rel='noopener noreferrer'
+                >
+                  <LazyLoadImage
+                    src={data.url}
+                    alt={data.title}
+                    effect='blur'
+                  />
                 </a>
               )}
               <p>{data.explanation}</p>

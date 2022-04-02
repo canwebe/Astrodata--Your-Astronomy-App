@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import './roverInfo.css'
 import { MdNavigateBefore, MdNavigateNext } from 'react-icons/md'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
+import Gallary from '../../Components/Gallary'
 const api_key = process.env.REACT_APP_API
 
 const RoverInfo = ({ location, match }) => {
@@ -31,7 +34,7 @@ const RoverInfo = ({ location, match }) => {
 
   const handleSearch = (e) => {
     e.preventDefault()
-    setSol(solRef.current.value)
+    setSol(parseInt(solRef.current.value))
   }
 
   const scrollRef = useRef()
@@ -106,15 +109,7 @@ const RoverInfo = ({ location, match }) => {
           ) : data.length === 0 ? (
             <h2>No Photos Found</h2>
           ) : (
-            data.map((photo) => (
-              <div key={photo.id} className='marsPhotoCard'>
-                <img src={photo.img_src} alt='mars rover' />
-                <div className='info'>
-                  <p>{photo.earth_date}</p>
-                  <h2>{photo.camera.full_name}</h2>
-                </div>
-              </div>
-            ))
+            <Gallary data={data} />
           )}
         </div>
 

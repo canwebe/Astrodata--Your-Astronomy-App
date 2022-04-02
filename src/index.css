@@ -39,3 +39,9 @@ h1 {
 img {
   width: 100%;
 }
+
+.imgSpan span,
+.marsPhotoCard span,
+.roverCard span {
+  width: 100%;
+}

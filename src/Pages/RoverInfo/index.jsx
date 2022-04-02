@@ -4,7 +4,6 @@ import './roverInfo.css'
 import {
   MdNavigateBefore,
   MdNavigateNext,
-  MdArrowLeft,
   MdChevronLeft,
   MdRefresh,
 } from 'react-icons/md'

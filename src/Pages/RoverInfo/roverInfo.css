@@ -33,7 +33,7 @@ button.cameraBtn:active {
 }
 
 h1.roverDataHeadline {
-  margin: 20px auto 10px;
+  margin: 27px auto 10px;
 }
 
 .solControl {
@@ -115,9 +115,6 @@ h1.roverDataHeadline {
 }
 
 .marsPhotoCard {
-  /* margin: 0 auto; */
-  /* margin: 0px 20px 26px; */
-  /* margin-bottom: 25px; */
   padding: 8px;
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
@@ -135,11 +132,6 @@ h1.roverDataHeadline {
 }
 
 .nextPage {
-  /* display: flex;
-  justify-content: center;
-  margin: 40px auto 20px;
-  align-items: center;
-  gap: 30px; */
   display: grid;
   grid-template-columns: 1fr 50px 1fr;
   margin: 40px auto 20px;
@@ -195,7 +187,7 @@ div.backresetDiv {
   flex-direction: row;
   justify-content: space-between;
   position: absolute;
-  top: 14px;
+  top: 19px;
   left: 14px;
   right: 14px;
 }
@@ -203,9 +195,8 @@ div.backresetDiv button {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 7px 0; */
   width: 90px;
-  height: 34px;
+  height: 35.5px;
   font-size: 1.5rem;
   border: 1px solid white;
   background-color: rgb(152, 10, 10);
@@ -224,7 +215,6 @@ div.backresetDiv button:active {
 }
 div.backresetDiv button svg {
   font-size: 2rem;
-  /* margin-top: -2px; */
 }
 div.backresetDiv button:nth-child(1) {
   padding-right: 9px;
@@ -239,7 +229,6 @@ div.backresetDiv button:nth-child(1):active {
 div.backresetDiv button:nth-child(1) svg {
   margin-right: -5px;
   font-size: 2.3rem;
-  /* margin-top: -3px; */
 }
 
 @media screen and (min-width: 925px) {

@@ -5,10 +5,8 @@ import './home.css'
 
 const api_key = process.env.REACT_APP_API
 
-const Home = () => {
-  const [data, setData] = useState(null)
+const Home = ({ data, setData }) => {
   const [isLoading, setIsLoading] = useState(false) //trues
-
   const dateRef = useRef()
 
   //Functions
@@ -63,37 +61,40 @@ const Home = () => {
           <input ref={dateRef} onChange={fetchData} type='date' />
         </div>
       </div>
-      <div className='wrapper'>
+      <div>
         {isLoading ? (
-          <div className='loadingDiv'>Loading Please Wait...</div>
-        ) : (
-          data !== null && (
-            <div className='apodData'>
+          <p className='loadingDiv'>Loading Please Wait...</p>
+        ) : data?.title ? (
+          <div className='apodData'>
+            <div className='wrapper'>
               <h3>{data.date}</h3>
               <h2>{data.title}</h2>
-              {data.media_type === 'video' ? (
-                <iframe
-                  title={data.title}
-                  src={data.url}
-                  width='100%'
-                  height='230px'
-                />
-              ) : (
-                <a
-                  className='imgSpan'
-                  target='_blank'
-                  href={data.hdurl}
-                  rel='noopener noreferrer'
-                >
-                  <LazyLoadImage
-                    src={data.url}
-                    alt={data.title}
-                    effect='blur'
-                  />
-                </a>
-              )}
+            </div>
+            {data.media_type === 'video' ? (
+              <iframe
+                title={data.title}
+                src={data.url}
+                width='100%'
+                height='230px'
+              />
+            ) : (
+              <a
+                className='imgSpan'
+                target='_blank'
+                href={data.hdurl}
+                rel='noopener noreferrer'
+              >
+                <LazyLoadImage src={data.url} alt={data.title} effect='blur' />
+              </a>
+            )}
+            <div className='wrapper'>
+              <p className='homeInfo'>Click the photo for full hd Assets</p>
               <p>{data.explanation}</p>
             </div>
+          </div>
+        ) : (
+          data?.code === 400 && (
+            <p className='loadingDiv'>No data found for this Date</p>
           )
         )}
       </div>

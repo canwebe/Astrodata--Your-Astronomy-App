@@ -1,8 +1,9 @@
 .home img {
   width: 100%;
-  margin: 20px auto;
+  margin: 20px auto 15px;
   box-shadow: 0px 0px 18px 2px rgb(0, 0, 0, 29%);
-  padding: 5px;
+  padding: 3px;
+  border-radius: 8px;
 }
 iframe {
   margin: 20px auto;
@@ -22,13 +23,15 @@ iframe {
   word-spacing: 4px;
 }
 
-.apodData h3 {
+.apodData h3,
+.searchDetails h3 {
   font-size: 1.6rem;
   margin: 15px auto 16px 3px;
   position: relative;
 }
 
-.apodData h3::after {
+.apodData h3::after,
+.searchDetails h3::after {
   width: 85px;
   height: 3px;
   background-color: rgb(253, 106, 106);
@@ -71,10 +74,21 @@ iframe {
 }
 
 .loadingDiv {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 500px;
-  font-size: 2.5rem;
+  align-items: center; */
+  text-align: center;
+  margin-top: 150px;
+  font-size: 2.3rem;
   font-weight: 300;
+}
+
+.apodData p.homeInfo {
+  background-color: rgb(36, 32, 32);
+  padding: 4px 10px;
+  color: rgb(201, 197, 197);
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.3rem;
+  word-spacing: 2px;
 }

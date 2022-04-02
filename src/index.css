@@ -42,8 +42,13 @@ img {
 
 .imgSpan span,
 .marsPhotoCard span,
-.roverCard span {
+.roverCard span,
+.searchCard span {
   width: 100%;
+}
+
+.searchCard span {
+  max-height: 270px;
 }
 
 button {

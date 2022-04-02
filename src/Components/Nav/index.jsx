@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import './nav.css'
 
-const Nav = () => {
+const Nav = ({ setSearchData }) => {
   return (
     <>
       <div className='nav'>
@@ -11,11 +11,23 @@ const Nav = () => {
         </Link>
       </div>
       <div className='navLink'>
-        <NavLink exact activeClassName='selected' to='/'>
+        <NavLink
+          onClick={() => setSearchData([])}
+          exact
+          activeClassName='selected'
+          to='/'
+        >
           Space
         </NavLink>
-        <NavLink activeClassName='selected' to='/mars'>
+        <NavLink
+          onClick={() => setSearchData([])}
+          activeClassName='selected'
+          to='/mars'
+        >
           Mars
+        </NavLink>
+        <NavLink activeClassName='selected' to='/search'>
+          Search
         </NavLink>
       </div>
     </>

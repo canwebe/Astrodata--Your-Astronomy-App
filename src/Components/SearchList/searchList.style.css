@@ -1,0 +1,39 @@
+.searchLists {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+.searchCard {
+  padding-top: 14px;
+  box-shadow: 0 5px 17px 1px rgb(0, 0, 0, 0.28);
+  border-radius: 6px;
+}
+
+.searchCard h2 {
+  font-size: 2rem;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-left: 5px solid blue;
+}
+
+.searchCard span {
+  padding: 10px;
+  background-color: black;
+}
+.searchCard span img {
+  max-height: 240px;
+}
+
+.searchCardBottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 17px 20px;
+  background-color: black;
+  color: white;
+  margin-top: -2px;
+  border-radius: 0 0 6px 6px;
+}
+
+.searchCardBottom .media {
+  color: antiquewhite;
+}

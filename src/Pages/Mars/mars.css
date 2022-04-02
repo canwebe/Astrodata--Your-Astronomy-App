@@ -1,6 +1,9 @@
 .mars {
   padding-bottom: 40px;
 }
+h1.roverH1 {
+  width: 100% !important;
+}
 
 .marsDiv {
   min-height: 201px;

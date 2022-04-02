@@ -1,0 +1,83 @@
+.searchDetailsItem h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+div.searchDetailsItem {
+  width: 315px;
+}
+
+div.searchDetailsItem .date {
+  color: rgb(155, 170, 184);
+  font-size: 1.4rem;
+}
+
+div.searchDetails h3 {
+  font-size: 1.9rem !important;
+  margin-bottom: 25px;
+}
+
+div.searchDetails h3::after {
+  width: 57px !important;
+}
+
+.searchDetails span {
+  width: 100%;
+}
+
+.searchDetails .description {
+  margin: 23px 0;
+  font-size: 1.8rem;
+  word-spacing: 2px;
+  line-height: 25px;
+}
+
+span.tag {
+  color: blue;
+  margin: 0 5px;
+}
+
+.search {
+  padding-bottom: 70px;
+}
+
+.searchDetails button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin: 15px 0 17px -8px;
+  font-size: 1.8rem;
+  height: 30px;
+  transition: all 0.2s;
+}
+
+.searchDetails button svg {
+  font-size: 3rem;
+  margin-right: -5px;
+}
+
+.searchDetails button:hover {
+  color: blue;
+}
+
+.searchDetails button:active {
+  color: blue;
+  transform: translateX(-3px);
+}
+
+.albumWrapper {
+  margin: 13px 0 17px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 14px;
+}
+
+.albumWrapper a {
+  background-color: blue;
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-size: 1.4rem;
+  color: rgb(221, 221, 221);
+}

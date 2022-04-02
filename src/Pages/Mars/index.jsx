@@ -32,7 +32,7 @@ const Mars = () => {
     <div className='mars'>
       <div className='homeDiv marsDiv'>
         <div>
-          <h1>Select Any Rover</h1>
+          <h1 className='roverH1'>Select Any Rover</h1>
         </div>
       </div>
       <div className='wrapper'>

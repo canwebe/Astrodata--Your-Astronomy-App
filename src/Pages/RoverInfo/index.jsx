@@ -1,13 +1,18 @@
 import React, { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import './roverInfo.css'
-import { MdNavigateBefore, MdNavigateNext } from 'react-icons/md'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
+import {
+  MdNavigateBefore,
+  MdNavigateNext,
+  MdArrowLeft,
+  MdChevronLeft,
+  MdRefresh,
+} from 'react-icons/md'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import Gallary from '../../Components/Gallary'
 const api_key = process.env.REACT_APP_API
 
-const RoverInfo = ({ location, match }) => {
+const RoverInfo = ({ location, match, history }) => {
   const { rover } = match.params
   const { cameras, max_sol } = location.state
   const [data, setData] = useState([])
@@ -35,6 +40,7 @@ const RoverInfo = ({ location, match }) => {
   const handleSearch = (e) => {
     e.preventDefault()
     setSol(parseInt(solRef.current.value))
+    solRef.current.value = ''
   }
 
   const scrollRef = useRef()
@@ -49,6 +55,16 @@ const RoverInfo = ({ location, match }) => {
     setSol((prev) => prev + dir)
   }
 
+  const handleReset = () => {
+    setPage(1)
+    setSol(max_sol)
+    setCamera('')
+  }
+
+  const handleBack = () => {
+    history.push('/mars')
+  }
+
   useEffect(() => {
     fetchPhotos()
   }, [camera, sol, page])
@@ -57,6 +73,16 @@ const RoverInfo = ({ location, match }) => {
     <>
       <div className='mars'>
         <div ref={scrollRef} className='homeDiv marsDiv'>
+          <div className='backresetDiv'>
+            <button onClick={handleBack}>
+              <MdChevronLeft />
+              Back
+            </button>
+            <button onClick={handleReset}>
+              <MdRefresh />
+              Reset
+            </button>
+          </div>
           <div className='flexItem'>
             <h1 className='roverDataHeadline'>{rover.toUpperCase()}</h1>
             <p className='maxSol'>

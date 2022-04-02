@@ -33,7 +33,7 @@ button.cameraBtn:active {
 }
 
 h1.roverDataHeadline {
-  margin: 0px auto 10px;
+  margin: 20px auto 10px;
 }
 
 .solControl {
@@ -188,6 +188,58 @@ h1.roverDataHeadline {
 .nextPage button:active {
   border-bottom: 1px solid rgb(15, 1, 61);
   transform: translateY(2px);
+}
+
+div.backresetDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+}
+div.backresetDiv button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 7px 0; */
+  width: 90px;
+  height: 34px;
+  font-size: 1.5rem;
+  border: 1px solid white;
+  background-color: rgb(152, 10, 10);
+  color: white;
+  gap: 4px;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+div.backresetDiv button:hover {
+  border-color: #a9afb4;
+}
+
+div.backresetDiv button:active {
+  background-color: rgb(128, 9, 9);
+  border-color: black;
+}
+div.backresetDiv button svg {
+  font-size: 2rem;
+  /* margin-top: -2px; */
+}
+div.backresetDiv button:nth-child(1) {
+  padding-right: 9px;
+  background-color: transparent;
+}
+
+div.backresetDiv button:nth-child(1):active {
+  color: black;
+  background-color: white;
+}
+
+div.backresetDiv button:nth-child(1) svg {
+  margin-right: -5px;
+  font-size: 2.3rem;
+  /* margin-top: -3px; */
 }
 
 @media screen and (min-width: 925px) {

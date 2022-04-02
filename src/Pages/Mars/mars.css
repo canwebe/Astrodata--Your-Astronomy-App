@@ -5,6 +5,7 @@
 .marsDiv {
   min-height: 201px;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .roverList {

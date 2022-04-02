@@ -45,3 +45,7 @@ img {
 .roverCard span {
   width: 100%;
 }
+
+button {
+  cursor: pointer;
+}

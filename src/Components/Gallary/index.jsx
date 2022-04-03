@@ -22,4 +22,4 @@ export const Gallary = ({ data }) => {
   ))
 }
 
-export default Gallary
+export default trackWindowScroll(Gallary)

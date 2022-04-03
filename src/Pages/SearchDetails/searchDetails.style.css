@@ -23,6 +23,7 @@ div.searchDetails h3::after {
 
 .searchDetails span {
   width: 100%;
+  min-height: 230px;
 }
 
 .searchDetails .description {

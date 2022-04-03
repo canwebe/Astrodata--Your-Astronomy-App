@@ -127,6 +127,11 @@ h1.roverDataHeadline {
   border-radius: 6px;
 }
 
+.marsPhotoCard span {
+  min-height: 300px;
+  width: 100%;
+}
+
 .info {
   padding: 10px 10px 6px;
 }

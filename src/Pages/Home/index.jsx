@@ -58,7 +58,12 @@ const Home = ({ data, setData }) => {
       <div className='homeDiv'>
         <div>
           <h1>Change date for different Photo Of The Day</h1>
-          <input ref={dateRef} onChange={fetchData} type='date' />
+          <input
+            ref={dateRef}
+            placeholder='Choose Date'
+            onChange={fetchData}
+            type='date'
+          />
         </div>
       </div>
       <div>
@@ -84,7 +89,12 @@ const Home = ({ data, setData }) => {
                 href={data.hdurl}
                 rel='noopener noreferrer'
               >
-                <LazyLoadImage src={data.url} alt={data.title} effect='blur' />
+                <LazyLoadImage
+                  src={data.url}
+                  alt={data.title}
+                  effect='blur'
+                  placeholderSrc={process.env.PUBLIC_URL + '/placeholder.png'}
+                />
               </a>
             )}
             <div className='wrapper'>

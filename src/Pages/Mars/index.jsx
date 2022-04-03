@@ -10,9 +10,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css'
 const imgs = [Curiosity, Spirit, Opportunity, Perseverance]
 const api_key = process.env.REACT_APP_API
 
-const Mars = () => {
-  const [roverData, setRoverData] = useState([])
-
+const Mars = ({ roverData, setRoverData }) => {
   const fetchRover = () => {
     fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers?api_key=${api_key}`)
       .then((json) => json.json())
@@ -51,7 +49,12 @@ const Mars = () => {
                   key={i}
                   className='roverCard'
                 >
-                  <LazyLoadImage src={imgs[i]} alt={rover.name} effect='blur' />
+                  <LazyLoadImage
+                    src={imgs[i]}
+                    alt={rover.name}
+                    effect='blur'
+                    placeholderSrc={process.env.PUBLIC_URL + '/placeholder.png'}
+                  />
 
                   <div className='roverDetails'>
                     <h2>{rover.name}</h2>

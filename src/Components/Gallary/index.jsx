@@ -13,6 +13,7 @@ export const Gallary = ({ data, scrollPosition }) => {
         effect='blur'
         scrollPosition={scrollPosition}
         width='100%'
+        placeholderSrc={process.env.PUBLIC_URL + '/placeholder.png'}
       />
       <div className='info'>
         <p>{photo.earth_date}</p>

@@ -19,10 +19,12 @@
 .searchCard span {
   padding: 10px;
   background-color: black;
+  width: 100%;
+  min-height: 200px;
 }
-.searchCard span img {
+/* .searchCard span img {
   max-height: 240px;
-}
+} */
 
 .searchCardBottom {
   display: flex;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
+import 'react-lazy-load-image-component/src/effects/opacity.css'
 
 export default function ImageLoader({ description, keywords, url }) {
   const [assetData, setAssetData] = useState('')
@@ -25,7 +25,12 @@ export default function ImageLoader({ description, keywords, url }) {
       ) : (
         <>
           {assetData && (
-            <LazyLoadImage src={assetData} alt='Original Photo' effect='blur' />
+            <LazyLoadImage
+              src={assetData}
+              alt='Original Photo'
+              effect='opacity'
+              placeholderSrc={process.env.PUBLIC_URL + '/placeholder.png'}
+            />
           )}
           <div className='wrapper'>
             <p className='description'>{description}</p>

@@ -8,6 +8,7 @@ import Search from './Pages/Search'
 import SearchDetails from './Pages/SearchDetails'
 const Routes = () => {
   const [searchData, setSearchData] = useState({})
+  const [roverData, setRoverData] = useState([])
   const [data, setData] = useState(null)
   return (
     <>
@@ -16,7 +17,9 @@ const Routes = () => {
         <Route exact path='/'>
           <Home data={data} setData={setData} />
         </Route>
-        <Route exact path='/mars' component={Mars} />
+        <Route exact path='/mars'>
+          <Mars roverData={roverData} setRoverData={setRoverData} />
+        </Route>
         <Route exact path='/mars/:rover' component={RoverInfo} />
         <Route exact path='/search'>
           <Search searchData={searchData} setSearchData={setSearchData} />

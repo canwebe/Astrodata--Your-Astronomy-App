@@ -92,3 +92,53 @@ iframe {
   font-size: 1.3rem;
   word-spacing: 2px;
 }
+
+/* Media Queries */
+@media screen and (min-width: 600px) {
+  .homeDiv {
+    padding: 60px 0;
+  }
+
+  .imgSpan span {
+    min-height: 400px;
+  }
+
+  .apodData p.homeInfo {
+    width: 526px;
+    margin: 0 auto 18px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .home img {
+    margin: 35px auto 19px;
+    padding: 6px;
+    border-radius: 3px;
+  }
+
+  .imgSpan {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  .imgSpan span {
+    min-height: 570px;
+  }
+  .apodData p {
+    width: 80%;
+    margin: 27px auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home img {
+    padding: 8px;
+  }
+
+  .imgSpan {
+    width: 80%;
+  }
+  .imgSpan span {
+    min-height: 614px;
+  }
+}

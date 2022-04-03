@@ -27,6 +27,7 @@ h1.roverH1 {
 .roverCard {
   width: 46%;
   padding: 3px;
+  max-width: 280px;
   border-radius: 5px;
   background-color: white;
   box-shadow: 2px 4px 16px -1px rgba(0, 0, 0, 0.282);
@@ -59,10 +60,57 @@ h1.roverH1 {
 }
 
 /* responsive design */
+@media screen and (min-width: 610px) {
+  .roverCard img {
+    height: 210px;
+  }
 
-@media screen and (min-width: 950px) {
+  .roverCard span {
+    width: 100%;
+  }
+
+  .marsDiv {
+    margin-bottom: 40px;
+  }
+
+  .roverCard h2 {
+    font-size: 2.3rem;
+    margin: 8px auto 8px;
+    text-align: start;
+  }
+
+  .roverDetails {
+    padding: 0 16px 10px;
+  }
+
+  .roverList {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 610px) {
+  .marsDiv {
+    margin-bottom: 50px;
+  }
+
+  .roverList {
+    grid-row-gap: 35px;
+    grid-column-gap: 40px;
+  }
+}
+
+@media screen and (min-width: 610px) {
+  .marsDiv {
+    margin-bottom: 75px;
+  }
   .roverCard {
-    width: 24%;
-    padding: 17px 10px;
+    width: 230px;
+  }
+  .roverList {
+    gap: 30px;
+  }
+
+  .roverCard img {
+    height: 170px;
   }
 }

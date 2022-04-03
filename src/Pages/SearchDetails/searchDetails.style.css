@@ -22,7 +22,7 @@ div.searchDetails h3::after {
   width: 57px !important;
 }
 
-.searchDetails span {
+.searchDetails span:not(.tag) {
   width: 100%;
   min-height: 230px;
 }
@@ -57,6 +57,7 @@ span.tag {
 .searchDetails button svg {
   font-size: 3rem;
   margin-right: -5px;
+  margin-top: -2px;
 }
 
 .searchDetails button:active,
@@ -89,4 +90,51 @@ audio {
   width: 97%;
   margin: 0 auto;
   display: block;
+}
+
+/* Media Query */
+@media screen and (min-width: 600px) {
+  .searchDetails span:not(.tag) {
+    min-height: 340px;
+  }
+  div.searchDetailsItem {
+    width: 90%;
+  }
+  audio {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  video,
+  .searchDetails span:not(.tag) {
+    min-height: 440px;
+    width: 750px;
+    display: block !important;
+    margin: 40px auto;
+  }
+  audio {
+    width: 700px;
+    margin: 40px auto;
+  }
+  .searchDetails button {
+    margin-bottom: 32px;
+  }
+  .searchDetails p.description,
+  .tags {
+    width: 750px;
+    margin: 0 auto;
+  }
+
+  .tags {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+
+  /* .tags span.tag {
+    display: inline-block !important;
+    margin: 0 10px;
+  } */
 }

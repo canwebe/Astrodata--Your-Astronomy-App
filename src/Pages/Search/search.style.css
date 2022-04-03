@@ -65,3 +65,82 @@
   width: 90px;
   padding: 6px;
 }
+
+/* Media Query */
+@media screen and (min-width: 600px) {
+  .searchFlexItem {
+    max-width: none;
+    width: 420px;
+  }
+  .searchDiv button.cameraBtn {
+    width: 100px;
+  }
+
+  .searchCard {
+    width: 250px;
+  }
+
+  .searchLists {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    grid-column-gap: 15px;
+    align-items: flex-start;
+    grid-row-gap: 25px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .searchCard {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .searchCard {
+    width: 350px;
+  }
+  .searchResultWrapper {
+    margin-bottom: 60px;
+  }
+  .searchFlexItem .searchDiv input {
+    padding: 11px 7px 11px 13px;
+    font-size: 1.7rem;
+  }
+  .cameraBtn {
+    font-size: 1.7rem;
+  }
+
+  .searchResultWrapper select {
+    padding: 5.5px 5px 5.5px 10px;
+    font-size: 1.7rem;
+  }
+
+  .searchResultWrapper select option {
+    padding: 6px;
+  }
+}
+
+@media screen and (min-width: 1045px) {
+  .searchCard {
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .searchCard {
+    width: 330px;
+  }
+  .searchLists {
+    grid-row-gap: 45px;
+  }
+}
+
+@media screen and (min-width: 1380px) {
+  .searchCard {
+    width: 300px;
+  }
+  .searchLists {
+    grid-row-gap: 45px;
+  }
+}

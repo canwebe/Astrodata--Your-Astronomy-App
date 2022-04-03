@@ -70,7 +70,7 @@ export default function DataLoader({ description, keywords, url, flag }) {
           {assetData && renderLoader()}
           <div className='wrapper'>
             <p className='description'>{description}</p>
-            <p>
+            <p className='tags'>
               {keywords &&
                 keywords.map((keyword) => (
                   <span key={keyword} className='tag'>

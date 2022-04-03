@@ -236,16 +236,60 @@ div.backresetDiv button:nth-child(1) svg {
   font-size: 2.3rem;
 }
 
-@media screen and (min-width: 925px) {
-  .marsPhotoCard img {
-    width: 281px;
-    height: 273px;
+/* Media Query */
+
+@media screen and (min-width: 600px) {
+  .solControl {
+    margin: -45px auto 26px;
+  }
+  .flexItem {
+    width: 410px;
+  }
+  .searchDiv {
+    width: 100%;
+  }
+
+  div.backresetDiv {
+    top: 24px;
+    left: 20px;
+    right: 20px;
+  }
+  .marsPhotoCard span {
+    min-height: 372px;
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .marsPhotoCard img {
-    width: 341px;
-    height: 325px;
+@media screen and (min-width: 900px) {
+  div.backresetDiv {
+    top: 26px;
+    left: 30px;
+    right: 30px;
+  }
+
+  .roverWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .marsPhotoCard {
+    max-width: 390px;
+    min-height: auto;
+  }
+  .marsPhotoCard span {
+    min-height: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .roverWrapper {
+    grid-column-gap: 37px;
+    grid-row-gap: 43px;
+  }
+
+  div.backresetDiv {
+    left: 35px;
+    right: 35px;
   }
 }

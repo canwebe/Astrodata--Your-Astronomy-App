@@ -9,7 +9,6 @@ export default function ImageLoader({ description, keywords, url }) {
   const fetchData = async () => {
     const res = await fetch(url)
     const json = await res.json()
-    console.log(json)
     const final = json.find((item) => item.includes('orig.'))
     setAssetData(final)
     setIsLoading(false)

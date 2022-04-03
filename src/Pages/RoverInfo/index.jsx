@@ -30,7 +30,6 @@ const RoverInfo = ({ location, match, history }) => {
     )
       .then((json) => json.json())
       .then((res) => {
-        console.log(res)
         setData(res.photos)
         setIsLoading(false)
       })

@@ -18,14 +18,12 @@ export default function SearchDetails({ location, history }) {
   }, [])
   return (
     <div className='search'>
-      {console.log('Run in Search')}
       <div className='homeDiv'>
         <div className='wrapper searchDetailsItem'>
           <h1>{data.title}</h1>
           <p className='date'>
             {new Date(data.date_created).toLocaleDateString()}
           </p>
-          {console.log(data)}
         </div>
       </div>
       <div className='searchDetails'>

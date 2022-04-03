@@ -11,7 +11,6 @@ export default function DataLoader({ description, keywords, url, flag }) {
   const fetchData = async () => {
     const res = await fetch(url)
     const json = await res.json()
-    console.log(json)
     const final = json.find((item) => item.includes('orig.'))
     if (flag === 'video') {
       const finalSrt = json.find((item) => item.includes('.vtt'))
@@ -69,7 +68,6 @@ export default function DataLoader({ description, keywords, url, flag }) {
       ) : (
         <>
           {assetData && renderLoader()}
-          {console.log(assetData, poster)}
           <div className='wrapper'>
             <p className='description'>{description}</p>
             <p>

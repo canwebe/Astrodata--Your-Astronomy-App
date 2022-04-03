@@ -48,7 +48,6 @@ export default function Search({
     try {
       const res = await fetch(link)
       const data = await res.json()
-      console.log(isReady)
       if (isReady) {
         setSearchData(data?.collection)
         setIsLoading(false)
@@ -104,8 +103,6 @@ export default function Search({
                     <option value='audio'>Audios</option>
                   </select>
                 </div>
-
-                {console.log(searchData)}
                 <SearchList data={searchData.items} />
                 <div className='searchBtnDiv'>
                   {searchData.links &&

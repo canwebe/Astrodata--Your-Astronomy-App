@@ -17,7 +17,6 @@ const SearchList = ({ data, scrollPosition }) => {
     if (observer.current) observer.current.disconnect()
     observer.current = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
-        console.log('Hit it')
         if (data.length > quantity) {
           setQuantity((prev) => prev + 15)
         }

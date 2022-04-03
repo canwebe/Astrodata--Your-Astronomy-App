@@ -5,6 +5,7 @@ import ImageLoader from '../../Components/ImageLoader'
 import AudioLoader from '../../Components/AudioLoader'
 import VideoLoader from '../../Components/VideoLoader'
 import { Link } from 'react-router-dom'
+import DataLoader from '../../Components/DataLoader'
 
 export default function SearchDetails({ location, history }) {
   const data = location.state?.data[0]
@@ -43,15 +44,13 @@ export default function SearchDetails({ location, history }) {
             </div>
           )}
         </div>
-        {data.media_type === 'image' && (
-          <ImageLoader
-            description={data.description}
-            keywords={data.keywords}
-            url={url}
-          />
-        )}
-        {data.media_type === 'audio' && <AudioLoader />}
-        {data.media_type === 'video' && <VideoLoader />}
+
+        <DataLoader
+          description={data.description}
+          keywords={data.keywords}
+          url={url}
+          flag={data.media_type}
+        />
       </div>
     </div>
   )

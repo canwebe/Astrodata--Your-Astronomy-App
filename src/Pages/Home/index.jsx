@@ -98,7 +98,7 @@ const Home = ({ data, setData }) => {
               </a>
             )}
             <div className='wrapper'>
-              <p className='homeInfo'>Click the photo for full hd Assets</p>
+              <p className='homeInfo'>Click the photo for Full HD Asset</p>
               <p>{data.explanation}</p>
             </div>
           </div>

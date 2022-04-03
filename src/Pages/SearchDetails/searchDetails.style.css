@@ -58,13 +58,9 @@ span.tag {
   margin-right: -5px;
 }
 
+.searchDetails button:active,
 .searchDetails button:hover {
   color: blue;
-}
-
-.searchDetails button:active {
-  color: blue;
-  transform: translateX(-3px);
 }
 
 .albumWrapper {
@@ -81,4 +77,15 @@ span.tag {
   border-radius: 30px;
   font-size: 1.4rem;
   color: rgb(221, 221, 221);
+}
+
+video {
+  min-height: 210px;
+  width: 100%;
+}
+
+audio {
+  width: 97%;
+  margin: 0 auto;
+  display: block;
 }

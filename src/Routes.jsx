@@ -6,12 +6,16 @@ import Home from './Pages/Home'
 import RoverInfo from './Pages/RoverInfo'
 import Search from './Pages/Search'
 import SearchDetails from './Pages/SearchDetails'
+
 const Routes = () => {
   const [searchData, setSearchData] = useState({})
   const [roverData, setRoverData] = useState([])
   const [data, setData] = useState(null)
+  const [filter, setFilter] = useState('')
+
   return (
     <>
+      {console.count('Main screen')}
       <Nav setSearchData={setSearchData} />
       <Switch>
         <Route exact path='/'>
@@ -22,7 +26,12 @@ const Routes = () => {
         </Route>
         <Route exact path='/mars/:rover' component={RoverInfo} />
         <Route exact path='/search'>
-          <Search searchData={searchData} setSearchData={setSearchData} />
+          <Search
+            searchData={searchData}
+            setSearchData={setSearchData}
+            filter={filter}
+            setFilter={setFilter}
+          />
         </Route>
         <Route exact path='/search/details' component={SearchDetails} />
       </Switch>

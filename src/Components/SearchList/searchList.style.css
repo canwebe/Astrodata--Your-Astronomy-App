@@ -22,9 +22,9 @@
   width: 100%;
   min-height: 200px;
 }
-/* .searchCard span img {
-  max-height: 240px;
-} */
+.searchCard span img {
+  max-height: 290px;
+}
 
 .searchCardBottom {
   display: flex;
@@ -38,4 +38,13 @@
 
 .searchCardBottom .media {
   color: antiquewhite;
+}
+
+.searchLists button.loadMore {
+  background-color: rgb(38, 38, 187);
+  color: whitesmoke;
+  outline: none;
+  border: none;
+  padding: 7px 0;
+  font-size: 1.6rem;
 }

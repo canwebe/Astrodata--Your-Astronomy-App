@@ -1,6 +1,7 @@
 .searchDetailsItem h1 {
   font-size: 2rem;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 div.searchDetailsItem {

@@ -1,35 +1,61 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import SearchList from '../../Components/SearchList'
 import './search.style.css'
-export default function Search({ searchData, setSearchData }) {
+
+export default function Search({
+  searchData,
+  setSearchData,
+  filter,
+  setFilter,
+}) {
   const [query, setQuery] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [isBtnLoading, setIsBtnLoading] = useState(false)
+  const [isReady, setIsReady] = useState(true)
+
   const location = useLocation()
 
   const handleSearch = async (e) => {
-    setIsBtnLoading(true)
     e.preventDefault()
+    setIsBtnLoading(true)
+    setFilter('')
     await fetcher()
     setIsBtnLoading(false)
   }
-  const handlePage = async (link) => {
-    setIsLoading(true)
-    await fetcher(link)
-    setIsLoading(false)
+
+  const handleFilter = (e) => {
+    const currentFilter = e.target.value
+    setFilter(currentFilter)
+    if (currentFilter) {
+      const newLink = `https://images-api.nasa.gov/search?q=${query}&media_type=${currentFilter}`
+      fetcher(newLink)
+    }
+  }
+
+  const handlePage = (link) => {
+    if (filter) {
+      fetcher(link + `&media_type=${filter}`)
+    } else {
+      fetcher(link)
+    }
   }
 
   const fetcher = async (
     link = `https://images-api.nasa.gov/search?q=${query}`
   ) => {
+    setIsLoading(true)
     try {
       const res = await fetch(link)
       const data = await res.json()
-      console.log(data)
-      setSearchData(data?.collection)
+      console.log(isReady)
+      if (isReady) {
+        setSearchData(data?.collection)
+        setIsLoading(false)
+      }
     } catch (error) {
       console.log('Something went wrong!', error)
+      setIsLoading(false)
     }
   }
 
@@ -37,8 +63,9 @@ export default function Search({ searchData, setSearchData }) {
     if (location?.state) {
       setSearchData([])
       const customlink = `https://images-api.nasa.gov/album/${location.state}`
-      handlePage(customlink)
+      fetcher(customlink)
     }
+    return () => setIsReady(false)
   }, [])
 
   return (
@@ -66,9 +93,18 @@ export default function Search({ searchData, setSearchData }) {
           {!isLoading ? (
             searchData?.metadata?.total_hits ? (
               <>
-                <p className='searchResult'>
-                  Found <span>{searchData.metadata.total_hits}</span> Results
-                </p>
+                <div className='searchResultWrapper'>
+                  <p className='searchResult'>
+                    Found <span>{searchData.metadata.total_hits}</span> Results
+                  </p>
+                  <select onChange={handleFilter} value={filter} name='filter'>
+                    <option value=''>All</option>
+                    <option value='image'>Images</option>
+                    <option value='video'>Videos</option>
+                    <option value='audio'>Audios</option>
+                  </select>
+                </div>
+
                 {console.log(searchData)}
                 <SearchList data={searchData.items} />
                 <div className='searchBtnDiv'>

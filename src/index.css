@@ -4,10 +4,20 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+  height: 100%;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 body {

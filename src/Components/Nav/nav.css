@@ -1,8 +1,8 @@
 .nav {
   width: 100%;
-  background-color: #84c1da;
+  background-color: #054569;
   padding: 10px 20px;
-  box-shadow: 0 2px 6px rgba(44, 44, 44, 0.829);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.575);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,14 +14,15 @@
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #18474f;
+  color: #eff0f0;
 }
 
 .navLink {
   display: flex;
   justify-content: space-between;
   gap: 3px;
-  /* margin-bottom: -1px; */
+  margin-bottom: -2px;
+  background-color: #0f1a2c;
 }
 
 .navLink a {
@@ -37,6 +38,7 @@
 
 a.selected {
   /* background-color: rgb(59, 59, 59); */
-  background-color: rgb(36, 32, 32);
+  /* background-color: rgb(36, 32, 32); #37425B #054569*/
+  background-color: rgb(21, 29, 49);
   color: white;
 }

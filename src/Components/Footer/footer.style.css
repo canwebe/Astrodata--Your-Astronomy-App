@@ -1,0 +1,28 @@
+.footer {
+  padding: 14px 4px;
+  text-align: center;
+  font-size: 1.4rem;
+  word-spacing: 3px;
+  color: rgb(84, 84, 84, 0.62);
+  border-top: 1px solid rgb(205 205 205);
+  margin-top: auto;
+}
+
+.footer a {
+  font-size: 1.4rem;
+  color: rgba(201, 65, 16, 0.666);
+  font-weight: 600;
+}
+
+.home,
+.mars,
+.search {
+  min-height: 83vh;
+}
+
+@media screen and (min-width: 600px) {
+  .footer {
+    word-spacing: 4px;
+    letter-spacing: 1px;
+  }
+}

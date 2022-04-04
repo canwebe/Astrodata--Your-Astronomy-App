@@ -4,7 +4,7 @@ import './nav.css'
 
 const Nav = ({ setSearchData }) => {
   return (
-    <>
+    <div>
       <div className='nav'>
         <Link to='/'>
           <p>AstroData</p>
@@ -30,7 +30,7 @@ const Nav = ({ setSearchData }) => {
           Search
         </NavLink>
       </div>
-    </>
+    </div>
   )
 }
 

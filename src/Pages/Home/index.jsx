@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import './home.css'
+import bg from '../../Assets/50.webp'
 
 const api_key = process.env.REACT_APP_API
 

@@ -6,6 +6,7 @@ import Home from './Pages/Home'
 import RoverInfo from './Pages/RoverInfo'
 import Search from './Pages/Search'
 import SearchDetails from './Pages/SearchDetails'
+import Footer from './Components/Footer'
 
 const Routes = () => {
   const [searchData, setSearchData] = useState({})
@@ -35,6 +36,7 @@ const Routes = () => {
         </Route>
         <Route exact path='/search/details' component={SearchDetails} />
       </Switch>
+      <Footer />
     </>
   )
 }

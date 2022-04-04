@@ -47,6 +47,13 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 40px 0;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.47), rgba(0, 0, 0, 0.47)),
+    url('../../Assets/50.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(0.9);
+  background-attachment: fixed;
 }
 
 .homeDiv input {

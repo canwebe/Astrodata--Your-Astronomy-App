@@ -33,5 +33,44 @@
   "display": "standalone",
   "theme_color": "#054569",
   "background_color": "azure",
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "categories": ["education"],
+  "shortcuts": [
+    {
+      "name": "APOD",
+      "url": "/",
+      "icons": [
+        {
+          "src": "icons8space.png",
+          "sizes": "64x64",
+          "description": "Astronomy Picture Of The Day",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Mars",
+      "url": "/mars",
+      "description": "Get Mars rover photos",
+      "icons": [
+        {
+          "src": "icons8mars.png",
+          "sizes": "60x60",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "url": "/search",
+      "description": "Search any space related queries",
+      "icons": [
+        {
+          "src": "icons8radar.png",
+          "sizes": "64x64",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
 }

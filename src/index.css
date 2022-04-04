@@ -23,6 +23,7 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   background-color: azure;
+  height: 100%;
 }
 
 a {

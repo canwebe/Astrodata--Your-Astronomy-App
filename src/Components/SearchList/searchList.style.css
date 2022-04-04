@@ -40,8 +40,6 @@
 
 .searchLists {
   display: flex;
-  /* gap: 30px; */
-  /* flex-direction: column; */
   width: auto;
   margin-left: -30px;
 }
@@ -56,13 +54,6 @@
 }
 
 .my-masonry-grid_column {
-  padding-left: 30px; /* gutter size */
+  padding-left: 30px;
   background-clip: padding-box;
 }
-
-/* Style your items */
-/* change div to reference your elements you put in <Masonry> */
-/* .my-masonry-grid_column > .searchCard {
-  margin-bottom: 30px;
-  background-color: blue;
-} */

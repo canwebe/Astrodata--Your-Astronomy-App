@@ -81,9 +81,6 @@ iframe {
 }
 
 .loadingDiv {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   text-align: center;
   margin-top: 150px;
   font-size: 2.3rem;

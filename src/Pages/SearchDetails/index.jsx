@@ -1,9 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import './searchDetails.style.css'
 import { MdChevronLeft } from 'react-icons/md'
-import ImageLoader from '../../Components/ImageLoader'
-import AudioLoader from '../../Components/AudioLoader'
-import VideoLoader from '../../Components/VideoLoader'
 import { Link } from 'react-router-dom'
 import DataLoader from '../../Components/DataLoader'
 

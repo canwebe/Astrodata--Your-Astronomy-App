@@ -9,6 +9,7 @@ import {
 } from 'react-icons/md'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import Gallary from '../../Components/Gallary'
+import Modal from '../../Components/Modal'
 const api_key = process.env.REACT_APP_API
 
 const RoverInfo = ({ location, match, history }) => {
@@ -19,6 +20,7 @@ const RoverInfo = ({ location, match, history }) => {
   const [sol, setSol] = useState(parseInt(max_sol))
   const [page, setPage] = useState(1)
   const [isLoading, setIsLoading] = useState(true)
+
   const solRef = useRef()
 
   const fetchPhotos = () => {

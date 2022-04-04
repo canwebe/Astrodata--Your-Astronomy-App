@@ -70,7 +70,6 @@ export default function Search({
 
   return (
     <div className='search'>
-      {console.log('Run in Search', location)}
       <div className='homeDiv'>
         <div className='searchFlexItem'>
           <h1>Search any query</h1>

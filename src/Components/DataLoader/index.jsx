@@ -7,19 +7,23 @@ export default function DataLoader({ description, keywords, url, flag }) {
   const [srt, setSrt] = useState('')
   const [poster, setPoster] = useState('')
   const [isLoading, setIsLoading] = useState(true)
+  const [vdoUrl, setVdoUrl] = useState('')
 
   const fetchData = async () => {
     const res = await fetch(url)
     const json = await res.json()
-    console.log(json)
-    const final = json.find((item) => item.includes('orig.'))
+
     if (flag === 'video') {
+      const vdoLinks = json.find((item) => item.includes('mobile.mp4'))
       const finalSrt = json.find((item) => item.includes('.vtt'))
       const finalPoster = json.find((item) => item.includes('thumb.'))
+      setVdoUrl(vdoLinks)
       setPoster(finalPoster)
       setSrt(finalSrt)
+    } else {
+      const final = json.find((item) => item.includes('orig.'))
+      setAssetData(final)
     }
-    setAssetData(final)
     setIsLoading(false)
   }
 
@@ -39,12 +43,7 @@ export default function DataLoader({ description, keywords, url, flag }) {
       )
     } else if (flag === 'video') {
       return (
-        <video
-          src={assetData}
-          poster={poster}
-          controls
-          crossOrigin='crossorigin'
-        >
+        <video src={vdoUrl} poster={poster} controls crossOrigin='crossorigin'>
           {srt && (
             <track
               src={srt}

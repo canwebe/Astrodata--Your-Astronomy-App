@@ -19,7 +19,6 @@ const SearchList = ({ data, scrollPosition }) => {
     observer.current = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
         if (data.length > quantity) {
-          console.log('I am Hit', node)
           setQuantity((prev) => prev + 15)
         }
       }
@@ -42,7 +41,6 @@ const SearchList = ({ data, scrollPosition }) => {
         className='searchLists'
         columnClassName='my-masonry-grid_column'
       >
-        {/* <div className='searchLists'> */}
         {currentData.map((item, i) => (
           <Link
             to={{
@@ -80,15 +78,6 @@ const SearchList = ({ data, scrollPosition }) => {
             </div>
           </Link>
         ))}
-        {/* {data.length > quantity && (
-          <button
-            className='loadMore'
-            onClick={() => setQuantity((prev) => prev + 15)}
-          >
-            Load More
-          </button>
-        )} */}
-        {/* </div> */}
       </Masonry>
     </>
   )

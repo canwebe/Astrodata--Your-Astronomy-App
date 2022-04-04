@@ -132,9 +132,4 @@ audio {
     flex-wrap: wrap;
     gap: 7px;
   }
-
-  /* .tags span.tag {
-    display: inline-block !important;
-    margin: 0 10px;
-  } */
 }

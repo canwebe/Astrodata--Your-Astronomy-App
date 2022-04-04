@@ -37,8 +37,6 @@
 }
 
 a.selected {
-  /* background-color: rgb(59, 59, 59); */
-  /* background-color: rgb(36, 32, 32); #37425B #054569*/
   background-color: rgb(9, 21, 38);
   color: white;
 }

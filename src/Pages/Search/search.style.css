@@ -79,19 +79,6 @@
   .searchDiv button.cameraBtn {
     width: 100px;
   }
-
-  .searchCard {
-    width: 48%;
-  }
-
-  .searchLists {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    grid-column-gap: 10px;
-    align-items: flex-start;
-    grid-row-gap: 25px;
-  }
 }
 
 @media screen and (min-width: 850px) {
@@ -114,22 +101,22 @@
   .searchResultWrapper select option {
     padding: 6px;
   }
-}
-
-@media screen and (min-width: 1000px) {
-  .searchCard {
-    width: 31%;
+  .my-masonry-grid_column {
+    padding-left: 35px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .searchLists {
-    grid-row-gap: 45px;
+  .searchCard {
+    margin-bottom: 40px;
+  }
+  .my-masonry-grid_column {
+    padding-left: 25px;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .searchCard {
-    width: 23%;
+  .my-masonry-grid_column {
+    padding-left: 39px;
   }
 }

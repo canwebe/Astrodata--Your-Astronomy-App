@@ -34,6 +34,7 @@ export default function Search({
   }
 
   const handlePage = (link) => {
+    window.scrollTo(0, 0)
     if (filter) {
       fetcher(link + `&media_type=${filter}`)
     } else {

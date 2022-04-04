@@ -4,6 +4,7 @@ import {
   trackWindowScroll,
 } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
+import Masonry from 'react-masonry-css'
 import { Link } from 'react-router-dom'
 import './searchList.style.css'
 
@@ -18,6 +19,7 @@ const SearchList = ({ data, scrollPosition }) => {
     observer.current = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
         if (data.length > quantity) {
+          console.log('I am Hit', node)
           setQuantity((prev) => prev + 15)
         }
       }
@@ -26,9 +28,21 @@ const SearchList = ({ data, scrollPosition }) => {
     if (node) observer.current.observe(node)
   }, [])
 
+  const breakpoints = {
+    default: 4,
+    1200: 3,
+    950: 2,
+    560: 1,
+  }
+
   return (
     <>
-      <div className='searchLists'>
+      <Masonry
+        breakpointCols={breakpoints}
+        className='searchLists'
+        columnClassName='my-masonry-grid_column'
+      >
+        {/* <div className='searchLists'> */}
         {currentData.map((item, i) => (
           <Link
             to={{
@@ -74,7 +88,8 @@ const SearchList = ({ data, scrollPosition }) => {
             Load More
           </button>
         )} */}
-      </div>
+        {/* </div> */}
+      </Masonry>
     </>
   )
 }

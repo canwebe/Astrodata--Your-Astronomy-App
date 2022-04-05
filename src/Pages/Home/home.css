@@ -63,6 +63,8 @@ iframe {
   font-size: 1.7rem;
   background-color: rgb(184, 219, 230);
   border: 2px solid white;
+  /* user-select: none; */
+  cursor: pointer;
 }
 
 .homeDiv div {
@@ -146,10 +148,17 @@ iframe {
   color: rgb(255, 255, 255);
 }
 
+.homePlayer {
+  height: 235px;
+}
+
 /* Media Queries */
 @media screen and (min-width: 600px) {
   .homeDiv {
     padding: 60px 0;
+  }
+  .homePlayer {
+    height: 305px;
   }
 
   .imgSpan span {
@@ -189,6 +198,12 @@ iframe {
     margin: 35px auto 19px;
     padding: 6px;
     border-radius: 3px;
+  }
+  .homePlayer {
+    height: 405px;
+    max-width: 940px;
+    margin: 20px auto;
+    display: block;
   }
 
   .imgSpan {

@@ -79,6 +79,7 @@ const Home = ({ data, setData }) => {
             placeholder='Choose Date'
             onChange={fetchData}
             type='date'
+            max={new Date()}
           />
         </div>
       </div>
@@ -96,7 +97,8 @@ const Home = ({ data, setData }) => {
                 title={data.title}
                 src={data.url}
                 width='100%'
-                height='230px'
+                // height='230px'
+                className='homePlayer'
               />
             ) : (
               <a

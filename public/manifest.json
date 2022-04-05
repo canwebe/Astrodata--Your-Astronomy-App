@@ -1,6 +1,6 @@
 {
   "short_name": "AstroData",
-  "name": "AstroData - Your All In One Astronomy App",
+  "name": "AstroData - Your Own Astronomy App",
   "icons": [
     {
       "src": "favicon.ico",
@@ -32,7 +32,7 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#054569",
-  "background_color": "azure",
+  "background_color": "#11bceb",
   "orientation": "portrait",
   "categories": ["education"],
   "shortcuts": [
@@ -42,7 +42,7 @@
       "icons": [
         {
           "src": "icons8space.png",
-          "sizes": "64x64",
+          "sizes": "96x96",
           "description": "Astronomy Picture Of The Day",
           "type": "image/png"
         }
@@ -55,7 +55,7 @@
       "icons": [
         {
           "src": "icons8mars.png",
-          "sizes": "60x60",
+          "sizes": "96x96",
           "type": "image/png"
         }
       ]
@@ -67,7 +67,7 @@
       "icons": [
         {
           "src": "icons8radar.png",
-          "sizes": "64x64",
+          "sizes": "96x96",
           "type": "image/png"
         }
       ]

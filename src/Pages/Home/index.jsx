@@ -2,13 +2,16 @@ import React, { useEffect, useState, useRef } from 'react'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 import './home.css'
-import bg from '../../Assets/50.webp'
+import usePWA from 'react-pwa-install-prompt'
+import { MdCancel } from 'react-icons/md'
 
 const api_key = process.env.REACT_APP_API
 
 const Home = ({ data, setData }) => {
   const [isLoading, setIsLoading] = useState(false) //trues
   const dateRef = useRef()
+  const [isPwamodal, setIsPwaModal] = useState(false)
+  const { isStandalone, isInstallPromptSupported, promptInstall } = usePWA()
 
   //Functions
 
@@ -33,6 +36,12 @@ const Home = ({ data, setData }) => {
       })
   }
 
+  const onClickInstall = async () => {
+    const didInstall = await promptInstall()
+    console.log(didInstall)
+    setIsPwaModal(false)
+  }
+
   //Side Effects
   useEffect(() => {
     let photos = localStorage.getItem('photo')
@@ -53,6 +62,12 @@ const Home = ({ data, setData }) => {
       fetchLocal()
     }
   }, [])
+
+  useEffect(() => {
+    if (isInstallPromptSupported && !isStandalone) {
+      setIsPwaModal(true)
+    }
+  }, [isInstallPromptSupported])
 
   return (
     <div className='home'>
@@ -109,6 +124,18 @@ const Home = ({ data, setData }) => {
           )
         )}
       </div>
+      {isPwamodal && (
+        <div className='pwaModal'>
+          <span onClick={() => setIsPwaModal(false)}>
+            <MdCancel />
+          </span>
+          <p>For faster experience Install this app</p>
+
+          <button className='installPwa' onClick={onClickInstall}>
+            Install
+          </button>
+        </div>
+      )}
     </div>
   )
 }

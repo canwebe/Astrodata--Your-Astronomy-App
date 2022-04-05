@@ -97,6 +97,55 @@ iframe {
   word-spacing: 2px;
 }
 
+.pwaModal {
+  background-color: #2a272d;
+  width: 100%;
+  max-width: 700px;
+  z-index: 9;
+  position: fixed;
+  padding: 46px 25px 16px;
+  text-align: center;
+  bottom: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 -1px 3px rgb(31 0 44 / 70%);
+}
+
+.pwaModal p {
+  color: rgb(238, 238, 238);
+  font-size: 2rem;
+}
+
+.pwaModal span {
+  position: absolute;
+  color: #fff;
+  font-size: 3.5rem;
+  right: 10px;
+  top: 7px;
+}
+
+.pwaModal .installPwa {
+  border-radius: 30px;
+  padding: 8px 35px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #f7caca;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2a272d;
+  margin-top: 13px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.pwaModal .installPwa:active,
+.pwaModal .installPwa:hover {
+  background-color: #2a272d;
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+
 /* Media Queries */
 @media screen and (min-width: 600px) {
   .homeDiv {
@@ -110,6 +159,28 @@ iframe {
   .apodData p.homeInfo {
     width: 526px;
     margin: 0 auto 18px;
+  }
+
+  .pwaModal {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 25px 25px 20px;
+    bottom: 10px;
+    border-radius: 8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .pwaModal .installPwa {
+    margin-top: 0;
+    margin-left: 15px;
+    padding: 8px 30px;
+    font-size: 1.8rem;
+  }
+
+  .pwaModal span {
+    top: 27px;
+    right: 20px;
   }
 }
 
